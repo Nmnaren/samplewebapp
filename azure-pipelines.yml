@@ -11,7 +11,7 @@ resources:
 variables:
 
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: '4305964c-9c12-45c1-a073-4d9b1f1a3901'
+  dockerRegistryServiceConnection: 'devopsnarendraacr'
   imageRepository: 'samplewebapp'
   containerRegistry: 'narendrababulinux/samplewebapp'
   dockerfilePath: '**/Dockerfile'
