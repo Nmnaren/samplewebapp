@@ -13,7 +13,7 @@ variables:
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: '4305964c-9c12-45c1-a073-4d9b1f1a3901'
   imageRepository: 'samplewebapp'
-  containerRegistry: 'devopsnarendracr.azurecr.io'
+  containerRegistry: 'narendrababulinux/samplewebapp'
   dockerfilePath: '**/Dockerfile'
   tag: '$(Build.BuildId)'
   imagePullSecret: 'devopsmelacr132827a7-auth'
@@ -62,7 +62,7 @@ stages:
     displayName: Deploy
     pool:
       vmImage: $(vmImageName)
-    environment: 'Dev'
+    environment: 'samplewebapp-narendra.default'
     strategy:
       runOnce:
         deploy:
