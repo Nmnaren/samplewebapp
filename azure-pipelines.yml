@@ -62,7 +62,7 @@ stages:
     displayName: Deploy
     pool:
       vmImage: $(vmImageName)
-    environment: 'samplewebapp-2040.default'
+    environment: 'samplewebapp-narendra.default'
     strategy:
       runOnce:
         deploy:
