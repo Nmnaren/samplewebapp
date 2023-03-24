@@ -9,11 +9,16 @@ resources:
 - repo: self
 
 parameters:
-  - type: string 
-    name: dev
+  - name: environment
+    displayName: Environment
+    type: string
+    default: dev
     values:
-      - dev 
+      - dev
       - test
+      - preprod
+      - prod
+
 
 variables:
 
