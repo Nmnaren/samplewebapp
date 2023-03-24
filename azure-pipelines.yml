@@ -18,10 +18,7 @@ parameters:
       - test
       - preprod
       - prod
-variables:
-    userenv: ${{ parameters.environment }}
-    devSubscription: 'deployment'
-    testSubscription: 'reduce'
+    
 
 
 variables:
@@ -33,6 +30,9 @@ variables:
   dockerfilePath: '**/Dockerfile'
   tag: '$(Build.BuildId)'
   imagePullSecret: 'devopsmelacr132827a7-auth'
+  userenv: ${{ parameters.environment }}
+  devSubscription: 'deployment'
+  testSubscription: 'reduce'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
