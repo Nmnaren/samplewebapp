@@ -18,6 +18,10 @@ parameters:
       - test
       - preprod
       - prod
+variables:
+    userenv: ${{ parameters.environment }}
+    devSubscription: 'deployment'
+    testSubscription: 'reduce'
 
 
 variables:
