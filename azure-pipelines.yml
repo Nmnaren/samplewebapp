@@ -18,7 +18,13 @@ parameters:
       - test
       - preprod
       - prod
-    
+  - name: deployment
+    displayName: deployment 
+    type: string
+    default: application.yml
+    values:
+      - application.yml
+      - reduce.yaml
 
 
 variables:
@@ -31,8 +37,6 @@ variables:
   tag: '$(Build.BuildId)'
   imagePullSecret: 'devopsmelacr132827a7-auth'
   userenv: ${{ parameters.environment }}
-  devSubscription: 'deployment'
-  testSubscription: 'reduce'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -54,7 +58,7 @@ stages:
         repository: $(imageRepository)
         dockerfile: $(dockerfilePath)
         containerRegistry: $(dockerRegistryServiceConnection)
-        deployment: ${parameters.dev}
+
         tags: |
           $(tag)
 
