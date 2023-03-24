@@ -54,6 +54,7 @@ stages:
         repository: $(imageRepository)
         dockerfile: $(dockerfilePath)
         containerRegistry: $(dockerRegistryServiceConnection)
+        deployment: ${parameters.dev}
         tags: |
           $(tag)
 
