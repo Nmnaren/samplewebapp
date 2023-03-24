@@ -8,6 +8,13 @@ trigger:
 resources:
 - repo: self
 
+parameters:
+  - type: string 
+    name: dev
+    values:
+      - dev 
+      - test
+
 variables:
 
   # Container registry service connection established during pipeline creation
